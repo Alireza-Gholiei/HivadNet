@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.2752196">
+	<PropertyGroup>
+		<StartupCommand>npm run dev:tls</StartupCommand>
+		<ShouldRunBuildScript>false</ShouldRunBuildScript>
+		<BuildCommand>npm run build:only</BuildCommand>
+		<BuildOutputFolder>$(MSBuildProjectDirectory)\.next</BuildOutputFolder>
+		<JavaScriptBundleRoot>$(MSBuildProjectDirectory)\</JavaScriptBundleRoot>
+		<StartupCommandWorkingDirectory>$(MSBuildProjectDirectory)</StartupCommandWorkingDirectory>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove=".vscode\**" />
+		<None Remove="certificates\**" />
+		<None Remove="publish\**" />
+		<TypeScriptConfiguration Remove=".vscode\**" />
+		<TypeScriptConfiguration Remove="certificates\**" />
+		<TypeScriptConfiguration Remove="publish\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove=".gitignore" />
+		<None Remove="publish.zip" />
+	</ItemGroup>
+</Project>
